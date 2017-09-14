@@ -1,0 +1,26 @@
+extends partials/layout
+block content
+    nav.navbar.navbar-inverse.bg-inverse
+        a.brand(href='./console')
+            strong P
+            | olished 
+            strong O
+            | peration 
+            strong S
+            | ystems
+    table.table
+        thead
+          tr
+            th Tech
+            th Status
+            th Completed
+        tbody
+          tr
+            th(scope='row') tech1
+            td Not Working
+            td 2
+          tr
+            th(scope='row') tech2
+            td Working
+            td 4
+    script(src='/javascripts/checkin.js')

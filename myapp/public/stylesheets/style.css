@@ -1,0 +1,82 @@
+#box > .btn {
+  display: block;
+  padding: auto;
+}
+
+#box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+#res2 {
+  margin-left: 10%;
+  background-color: grey;
+}
+
+#msg {
+  margin: 0 10% 0 10%;
+}
+
+@media only screen and (min-width: 300px) {
+  #box > .btn {
+    font: 20px, "Times New Roman", Times, serif;
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #box > .btn {
+    font: 40px, "Times New Roman", Times, serif;
+    width: 40%;
+    height: auto;
+  }
+}
+
+
+nav > a {
+  color: #fff;
+  margin: 0 0 0 85%;
+  text-align: center;
+}
+
+nav > a:hover {
+  border-radius: 5px;
+  background-color: #1a75ff;
+  color: #fff;
+  text-decoration: none;
+}
+
+h1, h3 {
+  color: #11aaff;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+select {
+  min-width: 200px;
+}
+
+.col-md-6 > h4 {
+  text-align: center;
+}
+
+form {
+  width: 70%;
+  margin: auto;
+}
+
+#typeSelect {
+  display: inline-block;
+  margin: auto;
+}
+
+#apptRadioButt, #walkinRadioButt {
+  width: 200px;
+}
+
+#col1 {
+  border-right: 1px solid black;
+}
+

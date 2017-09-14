@@ -1,0 +1,61 @@
+extends partials/layout
+block content
+  include partials/clientNav
+  br
+  #msg
+      h1 Welcome
+      h3 Please enter your information in order to check-in below.
+  br
+  .row
+    #typeSelect.btn-group(data-toggle='buttons')
+      label#apptRadioButt.btn.btn-primary
+        input(type='radio', name='options', checked)
+        |  Appointments
+      label#walkinRadioButt.btn.btn-primary
+        input(type='radio', name='options')
+        |  Walk-Ins
+  br
+  br
+  #ApptForm
+    form(action='/appointment' method='POST')
+      h4 Appointments
+      .form-group
+        label(for='formGroupExampleInput') Name
+        input#formGroupExampleInput.form-control(type='text', name='fullname' placeholder='Full Name')
+      .form-group
+        label(for='formGroupExampleInput2') Telephone Number
+        input#formGroupExampleInput2.form-control(type='number' name='telephone' placeholder='(000) - 000 - 000')
+      .form-group
+        label Enter your Email Address to recieve future promotions 
+        input(type="text" name='email' placeholder='Email@Email.com')
+      input.btn.btn-primary(type='submit')
+  #WalkForm
+    form(action='/walkin' method='POST')
+      h4 Walk-ins
+      .form-group
+        label(for='formGroupExampleInput') Name
+        input#formGroupExampleInput.form-control(type='text', name='name' placeholder='Name')
+      .form-group
+        label(for='formGroupExampleInput2') Telephone Number
+        input#formGroupExampleInput2.form-control(type='tel' name='telephone' placeholder='(000) - 000 - 000')
+      .form-group
+        label(for='formGroupExampleInput2') Service:
+        br
+        select#services(class="custom-select" name='service')
+          option(value='s0' selected) Click to Select Service
+          option(value='s1') service1
+          option(value='s2') service2
+      .form-group
+        label(for='formGroupExampleInput2') Tech:
+        br
+        select#tech.custom-select(name='tech')
+          option(value='tech0' selected) Click to Select Tech
+          option(value='tech1') Tech1
+          option(value='tech2') Tech2
+      .form-group
+        label Enter your Email Address to recieve future promotions
+        input(type="text" name='email' placeholder='Email@Email.com')
+      .form-group  
+        input#formGroupExampleInput2.btn.btn-primary(type='submit')
+  script(src='/javascripts/checkin.js')
+  //script(src='/javascripts/checkInData.js')

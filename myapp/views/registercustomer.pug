@@ -1,0 +1,16 @@
+extends partials/layout
+block content
+  include partials/nav
+  br
+  form(action="/registercustomer" method="POST")
+      h4 Customer Register Account
+      .form-group
+        label(for='formGroupExampleInput') Full Name
+        input#formGroupExampleInput.form-control(type='text' name="fullname" placeholder='Full Name')
+      .form-group
+        label(for'formGroupExampleInput') Telephone
+        input#formGroupExampleInput.form-control(type='tel' name='telephone' placeholder='000 000 0000')
+      .form-group
+        label(for='formGroupExampleInput2') Email
+        input#formGroupExampleInput2.form-control(type='text' name="email" placeholder='Email')
+      input.btn.btn-primary(type='submit')
